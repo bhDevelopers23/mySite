@@ -1,0 +1,659 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+:root{
+    --main-color:#bb5502;
+    --black-color:#000;
+    --bg:#3d1501;
+    --border: .1rem solid rgba(255,255,255,.2);
+}
+
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;    
+
+}
+
+html::-webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius: 5rem; 
+}
+
+body
+{
+    background: var(--bg);
+}
+
+section{
+    padding: 2rem 7%;
+}
+
+.btn
+{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    font-size: 1.5rem;
+    color: #fff;
+    background: var(--main-color);
+    cursor: pointer;
+}
+
+.btn:hover{
+    letter-spacing: .2rem;
+}
+
+.heading
+{
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+}
+
+.heading span{
+    color:var(--main-color);
+    text-transform: uppercase;
+}
+
+.Coffee-header
+{
+    background:var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    box-shadow: 0 5px 6px rgba(0,0,0,0.05);
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.Coffee-header img
+{
+    height: 6rem;
+}
+
+.Coffee-header .navBar a{
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+.Coffee-header .navBar a:hover{
+    color: var(--bg);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+
+.Coffee-header .Coffee-icons div{
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+.Coffee-header .Coffee-icons div:hover{
+    color: var(--main-color);
+}
+
+#btn-bars
+{
+    display: none;
+}
+
+.Coffee-header .search-Form
+{
+    position: absolute;
+    top: 115%;
+    right: 7%;
+    background: #fff;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+.Coffee-header .search-Form input{
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color: var(--black-color);
+    padding: 1rem;
+    text-transform: none;
+}
+
+.Coffee-header .search-Form label{
+    cursor: pointer;
+    font-size: 2.2rem;
+    margin-left: 1.5rem;
+    color: var(--black-color);
+}
+
+.Coffee-header .search-Form.active{
+    transform: scaleY(1);
+}
+.Coffee-header .search-Form label:hover{
+    color: var(--main-color);
+
+}
+
+/* Cart Item Code Start*/
+.Coffee-header .cart-items-Container
+{
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    height: calc(100vh - 9.5rem);
+    width: 35rem;
+    background: #fff;
+    padding: 0 1.5rem;
+}
+
+.Coffee-header .cart-items-Container.active{
+    right: 0;
+}
+
+.Coffee-header .cart-items-Container .cart-item
+{
+    position: relative;
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    gap:1.5rem;
+}
+.Coffee-header .cart-items-Container .cart-item .fa-times
+{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--black-color);
+}
+
+.Coffee-header .cart-items-Container .cart-item .fa-times:hover{
+    color: var(--main-color);
+}
+
+.Coffee-header .cart-items-Container .cart-item
+{
+    height: 7rem;
+
+}
+
+.Coffee-header .cart-items-Container .cart-item .content h3{
+    font-size: 2rem;
+    color: var(--black-color);
+    padding-bottom: .5rem;
+}
+
+.Coffee-header .cart-items-Container .cart-item .content .price{
+    font-size: 1.5rem;
+    color: var(--main-color);
+    
+}
+
+.Coffee-header .cart-items-Container .btn{
+    width: 100%;
+    text-align: center;
+
+}
+
+/* Cart Item Code End*/
+/*Home Section Code Start*/
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url("../images/Coffee-BackGround.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.home .conTent
+{
+    max-width: 60rem;
+}
+
+.home .conTent h3
+{
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: var(--main-color);
+    text-shadow: 3px 3px 4px rgba(0,0,0,0.5);
+}
+
+.home .conTent p
+{
+    font-size: 2rem;
+    line-height: 1.9;
+    padding: 1rem 0;
+    font-weight: 500;
+    color: #fff;
+    
+}
+/*Home Section Code Start*/
+
+/* About Section Code Start*/
+.about .row
+{
+    display: flex;
+    align-items: center;
+    background: var(--black-color);
+    flex-wrap: wrap;
+}
+
+.about .row .aboutImage
+{
+    flex: 1 1 45rem;    
+}
+
+.about .row .aboutImage img
+{
+    width: 100%;
+}
+
+.about .row .content
+{
+    flex: 1 1 45rem;
+    padding: 2rem;
+}
+
+.about .row .content h3{
+    font-size: 3rem;
+    color: #fff;
+
+}
+
+.about .row .content p{
+    font-size: 1.5rem;
+    color: #eee;
+    padding: 1rem 0;
+    line-height: 1.8;    
+}
+/* ================================ About Section Code End ==============================*/
+
+/* ===================== Menu Section Start Code ========================*/
+.menu .box-conTainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+.menu .box-conTainer .box{
+    padding: 5rem;
+    text-align: center;
+    border: var(--border);
+}
+
+.menu .box-conTainer .box img{
+    height: 20rem;
+}
+
+.menu .box-conTainer .box h3{
+    color: #fff;
+    font-size: 2.2rem;
+    padding: 1rem 0;
+}
+
+.menu .box-conTainer .box .price{
+    color: #fff;
+    font-size: 1.9rem;
+    padding: .5rem 0;
+}
+
+.menu .box-conTainer .box .price span{
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: line-through;
+}
+.menu .box-conTainer .box:hover{
+    background: #fff;
+
+}
+.menu .box-conTainer .box:hover > *{
+    color: var(--black-color);
+}
+/* =============================== Menu Section End Code ===============================*/
+
+/* ================= Products Section Code Start =================== */ 
+.products .box-conTainer
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.products .box-conTainer .box{
+    text-align: center;
+    border: var(--border);
+    padding: 2rem;
+}
+
+.products .box-conTainer .box .icons a{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    border: var(--border);
+    color: #fff;
+    margin: .3rem;
+}
+.products .box-conTainer .box .icons a:hover{
+    background-color: var(--main-color);
+}
+
+.products .box-conTainer .box .images{
+    padding: 2.5rem 0;
+}
+
+.products .box-conTainer .box .images img{
+    height: 25rem;
+}
+
+.products .box-conTainer .box .content h3{
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+.products .box-conTainer .box .content .stars{
+    color: yellow;
+    padding: 1.5rem;
+}
+
+.products .box-conTainer .box .content .stars i{
+    font-size: 1.7rem;
+}
+
+.products .box-conTainer .box .content .price
+{
+    color: whitesmoke;
+    font-size: 2.5rem;
+}
+
+.products .box-conTainer .box .content .price span
+{
+    color: whitesmoke;
+    font-size: 1.5rem;
+    text-decoration: line-through;
+}
+
+/* ================= Products Section Code End  =================== */ 
+
+/* ============================== Contact Us CSS Code Start =======================*/
+
+.contactUs .row
+{
+    display: flex;
+    background: var(--black-color);
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.contactUs .row .map{
+    flex:1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.contactUs .row form{
+    flex:1 1 45rem;
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.contactUs .row form h3
+{
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    color: #fff;
+}
+
+.contactUs .row form .inputBox
+{
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background: var(--black-color);
+    border: var(--border);
+}
+
+.contactUs .row form .inputBox span{
+    color: #fff;
+    font-size: 2rem;
+    padding-left: 2rem;
+
+}
+
+.contactUs .row form .inputBox input{
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.7rem;
+    color: #fff;
+    text-transform: none;
+    background: none;    
+}
+/* ============================== Contact Us CSS Code End =======================*/
+
+/* ============================= Blog CSS Code Start ===========================*/
+.blogs .box-container
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.blogs .box-container .box
+{
+    border: var(--border);
+
+}
+
+.blogs .box-container .box .image{
+    height: 25rem;
+    overflow: hidden;
+    width: 100%;
+
+}
+
+.blogs .box-container .box .image img{
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+
+}
+
+.blogs .box-container .box:hover .image img{
+    transform: scale(1.2);
+
+}
+
+.blogs .box-container .box .content{
+    padding: 2rem;
+
+}
+
+.blogs .box-container .box .content .title{
+    font-size: 2.5rem;
+    line-height: 1.5;
+    color:whitesmoke;
+}
+
+.blogs .box-container .box .content .title:hover{
+    color: var(--main-color);
+}
+
+.blogs .box-container .box .content span{
+    color: var(--main-color);
+    display: block;
+    padding-top: 1rem;
+    font-size: 2rem;
+
+}
+
+.blogs .box-container .box .content p{
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color: #ccc;
+    padding: 1rem 0;
+}
+/* ============================= Blog CSS Code End ===========================*/
+/*======================= Footer Section CSS Code Start ==========================*/
+.footer
+{
+    background: var(--black-color);
+    text-align: center;
+
+}
+
+.footer .share{
+    padding: 1rem 0;
+}
+
+.footer .share a{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color: #fff;
+    border: var(--border);
+    margin: .3rem;
+    border-radius: 50%;
+}
+
+.footer .share a:hover{
+    background: var(--bg);
+    color: var(--main-color);
+}
+.footer .links{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    gap: 1rem;
+}
+
+.footer .links a{
+    padding: .7rem 2rem;
+    color: #fff;
+    border: var(--border);
+    font-size: 2rem;
+
+}
+.footer .links a:hover{
+    color: var(--main-color);
+    background: var(--bg);
+}
+
+.footer .credits{
+    font-size: 2rem;
+    color: #fff;
+    font-weight: lighter;
+    padding: 1.5rem;
+
+}
+
+.footer .credits span{
+    color: var(--main-color);
+    
+}
+/*======================= Footer Section CSS Code End   ==========================*/
+
+/* All Media Query */
+@media (max-width:991px)
+{
+    html{
+        font-size: 55%;
+    }
+    .Coffee-header{
+        padding: 1.5rem 2rem;
+
+    }
+    section{
+        padding: 2rem;
+    }
+}
+
+@media (max-width:768px){
+    #btn-bars
+    {
+        display: inline-block
+    }
+
+    .Coffee-header .navBar{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background: #fff;
+        width: 30rem;
+        height: calc(100vh - 9.5rem);
+    }
+    .Coffee-header .navBar.active{
+        right: 0;
+    }
+    .Coffee-header .navBar a{
+        color: var(--black-color);
+        display: block;
+        margin: 1.5rem;
+        padding: .5rem;
+        font-size: 2rem;
+
+    }
+    .Coffee-header .search-Form
+    {
+        width: 90%;
+        right: 2rem;
+    }
+    .home{
+        background-position: left;
+        justify-content: center;
+        text-align: center;
+
+    }
+    .home .conTent h3{
+        font-size: 4.5rem;       
+
+    }
+    .home .conTent p{
+        font-size: 1.5rem;       
+
+    }
+
+}
+
+@media (max-width:450px)
+{
+    html{
+        font-size: 50%;
+    }
+    
+}
+
+
+/* All Media Query End*/
