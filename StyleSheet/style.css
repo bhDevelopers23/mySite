@@ -1,0 +1,133 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.navBar
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color:goldenrod;
+    width: 100%;
+    padding: 5px 30px;
+}
+
+.myShopLogo img{
+    width: 80px;
+    height: 60px;
+    box-shadow: 3px 3px 4px rgba(0,0,0,0.4);
+}
+.mainMenu
+{
+    display: flex;
+}
+.mainMenu li
+{
+    list-style: none;
+    margin: 0 20px;
+    font-size: 20px;
+    font-weight: 600;
+   
+}
+.mainMenu li a
+{
+    text-decoration: none;
+    color: #fff;
+}
+
+.mainMenu li a:hover{
+    color:black;
+}
+.heroSection img
+{
+    width: 100%;
+    height: 80%;
+}
+.cloth-Cards
+{
+    
+    display:grid;
+    width: 90%;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+    margin: auto;
+    grid-auto-rows: minmax(100px, auto);
+    grid-auto-columns: minmax(50px, auto);
+}
+ .men-cards
+{
+    width: 300px;
+    height: 450px;
+    margin-top: 30px;
+    background-color: bisque;
+    border-radius: 30px;
+    border: 5px green double;
+}
+.men-cards:hover{
+    transform: scale(1.1);
+    transition: all 0.4s ease-in-out;
+}
+.men-cards img
+{
+    width: 100%;
+    height: 60%;
+    border-radius: 28px 28px 0px 0px;   
+}
+
+.men-cards h2
+{
+    text-align: center;
+    color: green;
+    text-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+}
+
+.men-cards p
+{
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.5;
+}
+h1
+{
+    text-align: center;
+    color: goldenrod;
+    font-size: 50px;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 3px rgba(0,0,0,0.4);
+    margin: 20px;
+}
+.men-Kurta-Collection
+{
+    display: flex;
+    width: 90%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+.men-Kurta
+{
+    width: 300px;
+    height: 450px;
+    margin-top: 30px;
+    background-color: bisque;
+    border-radius: 30px;
+    border: 5px green double;
+}
+.men-Kurta img
+{
+    width: 100%;
+    height: 80%;
+    border-radius: 28px 28px 0px 0px;
+}
+.men-Kurta h2
+{
+    text-align: center;
+    margin: 10px auto;
+    color:#000;
+    text-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+}
